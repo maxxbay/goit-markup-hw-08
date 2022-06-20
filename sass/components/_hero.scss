@@ -1,0 +1,59 @@
+
+.hero {
+    display: flex;
+    padding: 200px 0;
+
+    max-width: 1600px;
+    width: 100%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #C4C4C4;
+    text-align: center;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url("../images/bckg-hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+&__title {
+    color: var(--hero);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 auto;
+    max-width: 696px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Кнопка */
+&__button {
+    font-family: inherit;
+    color: var(--hero);
+    background-color: var(--text-link);
+    min-width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 10px 32px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include transition-color;
+    @include transition-bcgcolor;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    cursor: pointer;
+    border: 1px solid transparent;
+
+}
+}

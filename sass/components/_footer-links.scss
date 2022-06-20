@@ -1,0 +1,47 @@
+.join {
+    margin-right: 93px;
+
+    &__item {
+    text-transform: uppercase;
+    display: flex;
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    color: var(--hero);
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__socials:not(:last-child) {
+    margin-right: 10px;
+    }
+
+    &__link {
+    display: inline-block;
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    @include transition-bcgcolor;
+    }
+
+    &__icon {
+    fill: var(--hero);
+    
+  }
+
+   &__link:hover,
+    &__link:focus {
+        background-color: var(--text-link);
+        border-radius: 50%;
+    }
+}
+

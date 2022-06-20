@@ -1,0 +1,64 @@
+
+.signup {
+    display: block;
+
+    &__text {
+    display: flex;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--hero);
+    }
+
+    &__box {
+        display: flex;
+    }
+
+    &__input {
+    display: block;
+    width: 358px;
+    margin-left: auto;
+    padding: 15px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: var(--bacground-color-hero);
+    color: rgba(255, 255, 255, 0.6);
+    }
+
+    &__button {
+            display: flex;
+    justify-content: space-between;
+    margin-left: 12px;
+    padding-left: 29px;
+    padding-right: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: var(--text-link);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    outline: var(--text-link);
+    cursor: pointer;
+    border: none;
+    }
+
+    &__signature {
+    display: flex;
+    margin-right: 10px;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    color: var(--hero);
+    }
+
+    &__icon {
+        display: flex;
+    }
+}

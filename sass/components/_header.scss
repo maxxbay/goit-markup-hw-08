@@ -1,0 +1,135 @@
+.header {
+    border-bottom: 1px solid ;
+
+
+    &__nav {
+    display: flex;
+    align-items: center;
+}
+    &__logo {
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+
+    text-decoration: none;
+}
+
+    .logo__web {
+    color: var(--text-link)
+}
+
+    .logo__studio {
+    color: var(--logo-studio);
+}
+
+    &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+    &__menu {
+    display: flex;
+}
+
+
+    .accent {
+    margin-right: 50px;
+    
+      
+}
+.accent:last-child {
+    margin-right: 0;
+}
+.link {
+    color: var(--text-color);
+    
+     }
+
+    &__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    @include transition-color;
+
+    &--current,
+    &:hover,
+    &:focus {
+        color: var(--text-link);
+        fill: var(--text-link);
+    }
+  }
+
+&__contacting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+&__item {
+  
+    position: relative;
+    
+}
+
+&__link--current::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--text-link);
+}
+
+
+
+&__icon {
+    &:hover,
+    &:focus {
+        fill: var(--text-link);}
+     @include transition-fill;
+
+}
+
+.adresses {
+    margin-right: 30px;
+}
+
+.adresses:last-child {
+    margin-right: 0;
+}
+
+.mail {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    
+}
+
+.tel {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+}

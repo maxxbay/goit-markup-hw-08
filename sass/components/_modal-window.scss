@@ -1,0 +1,70 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &__box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    width: 528px;
+    height: 581px;
+    padding: 40px;
+    border-radius: 4px;
+    background-color: var(--hero);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__button {
+    display: flex;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    min-width: 30px;
+    min-height: 30px;
+    padding: 6px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: var(--hero);
+    cursor: pointer;
+    @include transition-fill;
+     
+    &__icon {
+    fill: currentColor;
+    @include transition-fill;}
+        
+    &:hover {
+    fill: var(--text-link);
+    @include transition-fill;}
+
+    }
+    }
+
+
+.modal.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.modal.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.7);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
