@@ -1,19 +1,31 @@
-:root {
-    --primary-text-color: #212121;
-    --text-color: #757575;
-    --text-link: #2196F3;
-    --hero: #FFFFFF;
-    --background-team: #F5F4FA;
-    --bacground-color-hero: #2F303A;
-    --footer-color-text: rgba(255, 255, 255, 0.6);
-    --logo-studio: #000000;
-    --button-bcg: #F5F4FA;
-    --color-line: #ECECEC;
-    --color-border-icon: #AFB1B8;
-    --button-hover: #188ce8;
+
+    $primary-text-color: #212121;
+    $text-color: #757575;
+    $text-link: #2196F3;
+    $hero: #FFFFFF;
+    $background-team: #F5F4FA;
+    $bacground-color-hero: #2F303A;
+    $footer-color-text: rgba(255, 255, 255, 0.6);
+    $logo-studio: #000000;
+    $button-bcg: #F5F4FA;
+    $color-line: #ECECEC;
+    $color-border-icon: #AFB1B8;
+    $button-hover: #188ce8;
+    $color-auxiliary: #757575;
+    $background-overlay: rgba(47, 48, 58, 0.4);
+    $background-hero: #c4c4c4;
 
 
-}
+$transmition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+$primary-font: 'Roboto', sans-serif;
+$logo-font: 'Raleway';
+
+$transition-duration: 250ms;
+$transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-style: $transition-duration $transition-function;
+$grid-column-width: 70px;
+$grid-gutter-width: 30px;
+
 
 // @function getColor($key) {
 //   @return map-get($colors, $key);

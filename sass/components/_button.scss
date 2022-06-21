@@ -1,0 +1,24 @@
+.button {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    border: 0;
+    border-radius: 4px;
+    color: $primary-text-color;
+    background-color: $background-team;
+    cursor: pointer;
+
+    transition: makeTransition((background-color, color, box-shadow));
+
+    &:hover,
+    &:focus {
+        background-color: $button-hover;
+    }
+
+    &--primary {
+        color: $hero;
+        background-color: $text-link;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
