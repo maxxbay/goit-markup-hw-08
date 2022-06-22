@@ -1,21 +1,31 @@
 .join {
-    margin-right: 93px;
+       margin-bottom: 60px;
+
+    
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 25%;
+      margin-bottom: 0;
+    }
+  
 
     &__item {
     text-transform: uppercase;
-    display: flex;
-    margin-bottom: 20px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.03em;
-    color: var(--hero);
+    margin-bottom: 20px;
+ 
+
     }
 
     &__list {
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__socials:not(:last-child) {
@@ -34,14 +44,14 @@
     }
 
     &__icon {
-    fill: var(--hero);
+    fill: $hero;
     
   }
 
    &__link:hover,
     &__link:focus {
-        background-color: var(--text-link);
+        background-color: $text-link;
         border-radius: 50%;
     }
 }
-
+    

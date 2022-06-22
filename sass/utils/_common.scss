@@ -1,7 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--hero);
-  color: var(--text-color);
+  background-color: $hero;
+  color: $text-color;
 }
 
 ul,
@@ -35,6 +35,10 @@ img {
 
 }
 
+.fullwidth {
+  width: 100%;
+}
+
 .no-mark {
   list-style: none;
 }
@@ -44,19 +48,7 @@ img {
   padding-right: 15px;
   max-width: 1200px;
   margin: 0 auto;
-}
 
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
 }
 
 .display-block {
@@ -83,36 +75,75 @@ img {
 }
 
 .container {
-  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  // @include breakpointFrom(mobile) {
+  //   width: 480px;
+  // }
+
+  // @include breakpointFrom(tablet) {
+  //   width: 768px;
+  // }
+
+  // @include breakpointFrom(desktop) {
+  //   width: 1200px;
+  // }
 }
+
 .section {
   
   min-width: 320px;
-  // &__header {
-  //   margin-bottom: 30px;
-  //   text-align: center;
-  //   font-weight: 700;
-  //   font-size: 28px;
-  //   line-height: 1.17;
-  //   text-align: center;
-  
-    
-  
 
+  &__header {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;}
+  
     @media screen and (min-width: 1200px) {
       margin-bottom: 50px;
       font-size: 36px; }
-    
-  
+ 
+ }
 
-  &--vert-padding {
+ 
+  .toppadding {
     padding-top: 60px;
     padding-bottom: 60px;
     @media screen and (min-width: 1200px) {
       padding-top: 94px;
       padding-bottom: 94px;
     }
-  }}
+  }
+
+  .button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  border: 0;
+  border-radius: 4px;
+  color: $text-link;
+  background-color: $background-team;
+  cursor: pointer;
+  transition: makeTransition((background-color, color, box-shadow));
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover;
+  }
+
+  &--footer {
+    color: $hero;
+    background-color: $text-link;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
 
 @function makeTransition($transitionList, $delay: 0) {
   $list: ();
@@ -125,28 +156,6 @@ img {
   }
   @return $list;
 }
-
-@mixin hover-bcgcolor-blue {
-
-  &:hover,
-  &:focus {
-    background-color: var(--text-link);
-  }
-}
-
-
-@mixin transition-fill {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@mixin transition-color {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@mixin transition-bcgcolor {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 
     .logo__web {
     font-family: 'Raleway';
@@ -185,7 +194,6 @@ img {
   display: none;
 }
 
-// __________________
 
 .increase {
   color: $primary-text-color;
@@ -207,3 +215,93 @@ img {
 
 %absolute {
   position: absolute;}
+  
+@mixin transition-fill {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transition-color {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transition-bcgcolor {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin hover-bcgcolor-blue {
+
+  &:hover,
+  &:focus {
+    background-color: var(--text-link);
+  }
+}
+
+@mixin breakpointTo($point) {
+  @if $point==mobile {
+    @media only screen and (max-width: 479.98px) {
+      @content;
+    }
+  }
+  @if $point==tablet {
+    @media only screen and (max-width: 767.98px) {
+      @content;
+    }
+  }
+  @if $point==desktop {
+    @media only screen and (max-width: 1199.98px) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpointFrom($point) {
+  @if $point==mobile {
+    @media only screen and (min-width: 480px) {
+      @content;
+    }
+  }
+  @if $point==tablet {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $point==desktop {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpointBetween($pointFrom, $pointTo) {
+  @if $pointFrom==mobile {
+    @if $pointTo==tablet {
+      @media only screen and (min-width: 480px) and (max-width: 767.98px) {
+        @content;
+      }
+    } @else if $pointTo==desktop {
+      @media only screen and (min-width: 480px) and (max-width: 1199.98px) {
+        @content;
+      }
+    } @else {
+      @error 'wrong width';
+    }
+  }
+  @if $pointFrom==tablet {
+    @if $pointTo==desktop {
+      @media only screen and (min-width: 768px) and (max-width: 1199.98px) {
+        @content;
+      }
+    } @else {
+      @error 'wrong width';
+    }
+  }
+  @if $pointFrom==desktop {
+    @error 'wrong width';
+  }
+}
+
+%footer-fonts {
+  color: $hero;
+  font-size: 14px;
+  line-height: 1.71;
+}
