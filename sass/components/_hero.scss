@@ -1,6 +1,6 @@
 
 .hero {
- height: 400px; /* calc(100vh - 80px) */
+ min-height: 400px; /* calc(100vh - 80px) */
   padding-top: 0;
   padding-bottom: 0;
   display: flex;
@@ -11,24 +11,38 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-image: ('../images/hero/hero-mobile.jpg');
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25),
+   );
 
+    // width: 100%;
+  @media screen and (max-width: 479px) {
+   background-image: linear-gradient($background-overlay, $background-overlay),
+    url('../images/hero/hero-mobile.jpg');
+    width: 100%;
     
+  }
+  @media screen and (min-width: 480px) {
+   background-image: linear-gradient($background-overlay, $background-overlay),
+    url('../images/hero/hero-mobile.jpg');
+    
+  }
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: linear-gradient($background-overlay, $background-overlay), url('../images/hero/hero-mobile-2x.jpg');
+    background-image: linear-gradient($background-overlay, $background-overlay),
+    url('../images/hero/hero-mobile-2x.jpg');
   }
 
   @media screen and (min-width: 768px) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('../images/hero/hero-tablet.jpg');
+     url('../images/hero/hero-tablet.jpg');
 
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient($background-overlay, $background-overlay),
-        url('../images/hero/hero-tablet-2x.jpg');
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient($background-overlay, $background-overlay),
+    url('../images/hero/hero-tablet-2x.jpg');
     }
   }
 

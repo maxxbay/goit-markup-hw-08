@@ -82,22 +82,28 @@ img {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.container {
+  width: 100%;
+}
 .section {
   
   min-width: 320px;
-  &__header {
-    margin-bottom: 30px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.17;
-    text-align: center;
+  // &__header {
+  //   margin-bottom: 30px;
+  //   text-align: center;
+  //   font-weight: 700;
+  //   font-size: 28px;
+  //   line-height: 1.17;
+  //   text-align: center;
+  
+    
+  
 
     @media screen and (min-width: 1200px) {
       margin-bottom: 50px;
-      font-size: 36px;
-    }
-  }
+      font-size: 36px; }
+    
+  
 
   &--vert-padding {
     padding-top: 60px;

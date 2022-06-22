@@ -232,7 +232,11 @@ display: none;
 }
 .menu-container {
   display: flex;
-}
+  &:hover .header__icon--current,
+  &:focus .header__icon--current {
+    fill: $text-link;
+    transition: makeTransition((fill));
+}}
 
 .header__box {
   display: flex;
@@ -253,7 +257,7 @@ display: none;
       height: 100vh;
       padding: 48px 40px;
       background-color: #fff;
-      z-index: 999;
+      z-index: 3;
 
       .header__button {
         position: absolute;
@@ -275,7 +279,11 @@ display: none;
   }
 }
 
+// .menu-container:hover .header__icon--current,
+// .menu-container:focus .header__icon--current {
 
+ 
+// }
 
 //     .accent {
 //     margin-right: 50px;
