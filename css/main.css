@@ -456,8 +456,7 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: "../images/hero/hero-desktop.jpg";
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-mobile.jpg");
   /* Кнопка */
 }
 @media screen and (max-width: 479px) {
@@ -488,7 +487,6 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    height: calc(100vh - 80px);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-desktop.jpg");
   }
 }
