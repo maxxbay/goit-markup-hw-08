@@ -2,7 +2,6 @@
 <html lang="ru">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,45 +14,72 @@
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 
 <body>
     <!-- Шапка -->
-    <header class="header">
-        <div class="header__box container">
+    <header class="header section">
+        <div class="header__box container header_case" data-menu id="header">
             <nav class="header__nav">
                 <!-- Header logo -->
                 <a href="./index.html" class="header__logo logo"> <span class="logo__web">Web</span><span
                         class="logo__studio">Studio</span> </a>
-                <!-- Header nav -->
-                <ul class="header__menu list">
-                    <li class="header__item accent">
-                        <!-- Header studio -->
-                        <a href="./index.html" class="header__link focus">Студия</a></li>
-                    <li class="header__item accent">
-                        <!-- Header portfolio -->
-                        <a href="./portfolio.html" class="header__link header__link--current">Портфолио</a>
-                    </li>
-                    <li class="header__item accent">
-                        <!-- Header contacts -->
-                        <a href="#" class="header__link">Контакты</a>
-                    </li>
-                </ul>
+                <div class="menu-container" id="menu-container" data-menu>
+                    <button class="header__button" data-menu-button aria-expanded="false" aria-controls="header__box">
+                        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                            <use class="header__icon-open header__icon--current" href="./images/icons.svg#icon-menu">
+                            </use>
+                            <use class="header__icon-close header__icon--current"
+                                href="./images/icons.svg#icon-menu-close"></use>
+                        </svg>
+                    </button>
+                    <!-- Header nav -->
+                    <ul class="header__menu header__menu--list no-mark">
+                        <li class="header__item accent">
+                            <!-- Header studio -->
+                            <a href="./index.html" class="header__link focus">Студия</a></li>
+                        <li class="header__item accent">
+                            <!-- Header portfolio -->
+                            <a href="./portfolio.html" class="header__link header__link--current no-focus">Портфолио</a>
+                        </li>
+                        <li class="header__item accent">
+                            <!-- Header contacts -->
+                            <a href="#" class="header__link no-focus">Контакты</a>
+                        </li>
+                    </ul>
             </nav>
             <!-- Header contacting -->
-            <ul class="header__contacting list">
-                <li class="header__item adresses">
-                    <a href="mailto:info@devstudio.com" class="header__link link">
-                        <svg class="header__icon mail">
-                            <use href=" ./images/icons.svg#icon-mail"> </use>
-                        </svg> info@devstudio.com </a> </li>
-                <li class="header__item adresses">
-                    <a href="tel:+380961111111" class="header__link link">
-                        <svg class="header__icon tel">
-                            <use href="./images/icons.svg#icon-smartphone"> </use>
-                        </svg> +38 096 111 11 11</a>
-                </li>
-            </ul>
+            <div class="header__contacts">
+                <ul class="header__contacting list">
+                    <li class="header__item-adress adresses">
+                        <a href="mailto:info@devstudio.com"
+                            class="header__link header__link--adress header__link--mail">
+                            <svg width="16" height="12" class="header__contact-icon header__icon--mail">
+                                <use href=" ./images/icons.svg#icon-mail"> </use>
+                            </svg> info@devstudio.com </a> </li>
+                    <li class="header__item-adress adresses">
+                        <a href="tel:+380961111111" class="header__link header__link--adress header__link--tel">
+                            <svg width="10" height="16" class="header__contact-icon header__icon--tel">
+                                <use href="./images/icons.svg#icon-smartphone"> </use>
+                            </svg> +38 096 111 11 11</a>
+                    </li>
+                </ul>
+                <ul class="header__social-linkbox no-mark">
+                    <li class="header__social-linkitems">
+                        <a class="header__social-link" href="">Instagram</a>
+                    </li>
+                    <li class="header__social-linkitems">
+                        <a class="header__social-link" href="">Twitter</a>
+                    </li>
+                    <li class="header__social-linkitems">
+                        <a class="header__social-link" href="">Facebook</a>
+                    </li>
+                    <li class="header__social-linkitems">
+                        <a class="header__social-link" href="">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         </div>
 
     </header>
@@ -61,28 +87,30 @@
     <!-- Головна частина сторінки -->
     <main>
 
-        <section class="portfolio">
+        <section class="portfolio section toppadding">
             <div class="container">
-                <h1 class="portfolio-title">Кейси команди</h1>
-                <ul class="portfolio__btnlist">
-                    <li class="portfolio__item"><button type="button" name="All Products"
-                            class="portfolio__btn">Все</button></li>
-                    <li class="portfolio__item"><button type="button" name="Web Sites"
-                            class="portfolio__btn">Веб-сайты</button>
+                <h1 class="portfolio-title invisible">Кейси команди</h1>
+                <ul class="portfolio__btnlist no-mark">
+                    <li class="portfolio__item">
+                        <button type="button" name="All Products" class="portfolio__btn button">Все</button>
                     </li>
-                    <li class="portfolio__item"><button type="button" name="Aplications"
-                            class="portfolio__btn">Приложения</button>
+                    <li class="portfolio__item">
+                        <button type="button" name="Web Sites" class="portfolio__btn button">Веб-сайты</button>
                     </li>
-                    <li class="portfolio__item"><button type="button" name="Design" class="portfolio__btn">Дизайн</li>
+                    <li class="portfolio__item">
+                        <button type="button" name="Aplications" class="portfolio__btn button">Приложения</button>
+                    </li>
+                    <li class="portfolio__item"><button type="button" name="Design" class="portfolio__btn button">Дизайн
+                    </li>
                     <li class="portfolio__item"><button type="button" name="Marketing"
-                            class="portfolio__btn">Маркетинг</button>
+                            class="portfolio__btn button">Маркетинг</button>
                     </li>
 
                 </ul>
 
                 <!-- Список виконаних кейсів команди  -->
 
-                <ul class="cases">
+                <ul class="cases no-mark">
                     <li class="cases__items">
                         <a class="cases__link" href="">
                             <div class="cases__thumb">
@@ -91,8 +119,22 @@
                                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                                     или частном лице.
                                 </p>
-                                <img class="cases__img" src="./images/portfolio1.jpg" alt="Технокряк" width="370px"
-                                    height="294px">
+                                <picture>
+                                    <source srcset="
+                        ./images/portfolio/case1-desktop.jpg 1x,
+                        ./images/portfolio/case1-desktop-2x.jpg 2x
+                      " media="(min-width:1200px)" />
+                                    <source srcset="
+                        ./images/portfolio/case1-tablet.jpg 1x,
+                        ./images/portfolio/case1-tablet-2x.jpg 2x
+                      " media="(min-width:768px)" />
+                                    <source srcset="
+                        ./images/portfolio/case1-mobile.jpg 1x,
+                        ./images/portfolio/case1-mobile-2x.jpg 2x
+                      " media="(min-width:480px)" />
+                                    <img class="display-block fullwidth" src="./images/portfolio/case1-mobile.jpg"
+                                        alt="Технокряк" width="450" />
+                                </picture>
                             </div>
                             <div class="cases__block">
                                 <h2 class="cases__title">Технокряк</h2>
@@ -108,8 +150,22 @@
                                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                                     или частном лице.
                                 </p>
-                                <img class="cases__img" src="./images/portfolio2.jpg"
-                                    alt="Постер New Orlean vs Golden Star" width="370px" height="294px">
+                                <picture>
+                                    <source srcset="
+                        ./images/portfolio/case2-desktop.jpg 1x,
+                        ./images/portfolio/case2-desktop-2x.jpg 2x
+                      " media="(min-width:1200px)" />
+                                    <source srcset="
+                        ./images/portfolio/case2-tablet.jpg 1x,
+                        ./images/portfolio/case2-tablet-2x.jpg 2x
+                      " media="(min-width:768px)" />
+                                    <source srcset="
+                        ./images/portfolio/case2-mobile.jpg 1x,
+                        ./images/portfolio/case2-mobile-2x.jpg 2x
+                      " media="(min-width:480px)" />
+                                    <img class="display-block fullwidth" src="./images/portfolio/case2-mobile.jpg"
+                                        alt="Постер New Orlean" width="450" />
+                                </picture>
                             </div>
                             <div class="cases__block">
                                 <h2 class="cases__title">Постер New Orlean vs Golden Star</h2>
@@ -125,8 +181,22 @@
                                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                                     или частном лице.
                                 </p>
-                                <img class="cases__img" src="./images/portfolio3.jpg" alt="Ресторан Seafood"
-                                    width="370px" height="294px">
+                                <picture>
+                                    <source srcset="
+                        ./images/portfolio/case3-desktop.jpg 1x,
+                        ./images/portfolio/case3-desktop-2x.jpg 2x
+                      " media="(min-width:1200px)" />
+                                    <source srcset="
+                        ./images/portfolio/case3-tablet.jpg 1x,
+                        ./images/portfolio/case3-tablet-2x.jpg 2x
+                      " media="(min-width:768px)" />
+                                    <source srcset="
+                        ./images/portfolio/case3-mobile.jpg 1x,
+                        ./images/portfolio/case3-mobile-2x.jpg 2x
+                      " media="(min-width:480px)" />
+                                    <img class="display-block fullwidth" src="./images/portfolio/case3-mobile.jpg"
+                                        alt="Ресторан Seafood" width="450" />
+                                </picture>
                             </div>
                             <div class="cases__block">
                                 <h2 class="cases__title">Ресторан Seafood</h2>
@@ -142,8 +212,22 @@
                                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                                     или частном лице.
                                 </p>
-                                <img class="cases__img" src="./images/portfolio4.jpg" alt="Проект Prime" width="370px"
-                                    height="294px">
+                                <picture>
+                                    <source srcset="
+                        ./images/portfolio/case4-desktop.jpg 1x,
+                        ./images/portfolio/case4-desktop-2x.jpg 2x
+                      " media="(min-width:1200px)" />
+                                    <source srcset="
+                        ./images/portfolio/case4-tablet.jpg 1x,
+                        ./images/portfolio/case4-tablet-2x.jpg 2x
+                      " media="(min-width:768px)" />
+                                    <source srcset="
+                        ./images/portfolio/case4-mobile.jpg 1x,
+                        ./images/portfolio/case4-mobile-2x.jpg 2x
+                      " media="(min-width:480px)" />
+                                    <img class="display-block fullwidth" src="./images/portfolio/case4-mobile.jpg"
+                                        alt="Проект Prime" width="450" />
+                                </picture>
                             </div>
                             <div class="cases__block">
                                 <h2 class="cases__title">Проект Prime</h2>
@@ -159,8 +243,22 @@
                                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                                     или частном лице.
                                 </p>
-                                <img class="cases__img" src="./images/portfolio5.jpg" alt="Проект Boxes" width="370px"
-                                    height="294px">
+                                <picture>
+                                    <source srcset="
+                        ./images/portfolio/case5-desktop.jpg 1x,
+                        ./images/portfolio/case5-desktop-2x.jpg 2x
+                      " media="(min-width:1200px)" />
+                                    <source srcset="
+                        ./images/portfolio/case5-tablet.jpg 1x,
+                        ./images/portfolio/case5-tablet-2x.jpg 2x
+                      " media="(min-width:768px)" />
+                                    <source srcset="
+                        ./images/portfolio/case5-mobile.jpg 1x,
+                        ./images/portfolio/case5-mobile-2x.jpg 2x
+                      " media="(min-width:480px)" />
+                                    <img class="display-block fullwidth" src="./images/portfolio/case5-mobile.jpg"
+                                        alt="Маркетинг" width="450" />
+                                </picture>
                             </div>
                             <div class="cases__block">
                                 <h2 class="cases__title">Проект Boxes</h2>
@@ -176,8 +274,22 @@
                                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                                     или частном лице.
                                 </p>
-                                <img class="cases__img" src="./images/portfolio6.jpg" alt="Inspiration has no Borders"
-                                    width="370px" height="294px">
+                                <picture>
+                                    <source srcset="
+                        ./images/portfolio/case6-desktop.jpg 1x,
+                        ./images/portfolio/case6-desktop-2x.jpg 2x
+                      " media="(min-width:1200px)" />
+                                    <source srcset="
+                        ./images/portfolio/case6-tablet.jpg 1x,
+                        ./images/portfolio/case6-tablet-2x.jpg 2x
+                      " media="(min-width:768px)" />
+                                    <source srcset="
+                        ./images/portfolio/case6-mobile.jpg 1x,
+                        ./images/portfolio/case6-mobile-2x.jpg 2x
+                      " media="(min-width:480px)" />
+                                    <img class="display-block fullwidth" src="./images/portfolio/case6-mobile.jpg"
+                                        alt="Inspiration has no Borders" width="450" />
+                                </picture>
                             </div>
                             <div class="cases__block">
                                 <h2 class="cases__title">Inspiration has no Borders</h2>
@@ -193,8 +305,22 @@
                                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                                     или частном лице.
                                 </p>
-                                <img class="cases__img" src="./images/portfolio7.jpg" alt="Издание Limited Edition"
-                                    width="370px" height="294px">
+                                <picture>
+                                    <source srcset="
+                        ./images/portfolio/case7-desktop.jpg 1x,
+                        ./images/portfolio/case7-desktop-2x.jpg 2x
+                      " media="(min-width:1200px)" />
+                                    <source srcset="
+                        ./images/portfolio/case7-tablet.jpg 1x,
+                        ./images/portfolio/case7-tablet-2x.jpg 2x
+                      " media="(min-width:768px)" />
+                                    <source srcset="
+                        ./images/portfolio/case7-mobile.jpg 1x,
+                        ./images/portfolio/case7-mobile-2x.jpg 2x
+                      " media="(min-width:480px)" />
+                                    <img class="display-block fullwidth" src="./images/portfolio/case7-mobile.jpg"
+                                        alt="Издание Limited Edition" width="450" />
+                                </picture>
                             </div>
                             <div class="cases__block">
                                 <h2 class="cases__title">Издание Limited Edition</h2>
@@ -210,8 +336,22 @@
                                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                                     или частном лице.
                                 </p>
-                                <img class="cases__img" src="./images/portfolio8.jpg" alt="Проект LAB" width="370px"
-                                    height="294px">
+                                <picture>
+                                    <source srcset="
+                        ./images/portfolio/case8-desktop.jpg 1x,
+                        ./images/portfolio/case8-desktop-2x.jpg 2x
+                      " media="(min-width:1200px)" />
+                                    <source srcset="
+                        ./images/portfolio/case8-tablet.jpg 1x,
+                        ./images/portfolio/case8-tablet-2x.jpg 2x
+                      " media="(min-width:768px)" />
+                                    <source srcset="
+                        ./images/portfolio/case8-mobile.jpg 1x,
+                        ./images/portfolio/case8-mobile-2x.jpg 2x
+                      " media="(min-width:480px)" />
+                                    <img class="display-block fullwidth" src="./images/portfolio/case8-mobile.jpg"
+                                        alt="Проект LAB" width="450" />
+                                </picture>
                             </div>
                             <div class="cases__block">
                                 <h2 class="cases__title">Проект LAB</h2>
@@ -227,8 +367,22 @@
                                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                                     или частном лице.
                                 </p>
-                                <img class="cases__img" src="./images/portfolio9.jpg" alt="Growing Business"
-                                    width="370px" height="294px">
+                                <picture>
+                                    <source srcset="
+                        ./images/portfolio/case9-desktop.jpg 1x,
+                        ./images/portfolio/case9-desktop-2x.jpg 2x
+                      " media="(min-width:1200px)" />
+                                    <source srcset="
+                        ./images/portfolio/case9-tablet.jpg 1x,
+                        ./images/portfolio/case9-tablet-2x.jpg 2x
+                      " media="(min-width:768px)" />
+                                    <source srcset="
+                        ./images/portfolio/case9-mobile.jpg 1x,
+                        ./images/portfolio/case9-mobile-2x.jpg 2x
+                      " media="(min-width:480px)" />
+                                    <img class="display-block fullwidth" src="./images/portfolio/case9-mobile.jpg"
+                                        alt="Growing Business" width="450" />
+                                </picture>
                             </div>
                             <div class="cases__block">
                                 <h2 class="cases__title">Growing Business</h2>
@@ -245,25 +399,29 @@
     </main>
     <!-- Підвал сторінки -->
 
-    <footer class=" footer">
+    <footer class=" footer section">
         <div class="container footer__box">
             <div class="footer__main">
                 <a href="./index.html" class="footer__logo"><span class="logo__web">Web</span><span
                         class="logo__studio footer__logo--white">Studio</span></a>
                 <!-- Адреса і реквізити пошти і контактування -->
                 <adress class="footer__adress">
-                    <ul>
-                        <li class="footer__item"><a href="#" class="footer__item--adr">г. Киев, пр-т Леси Украинки,
+                    <ul class="no-mark">
+                        <li class="footer__item"><a href="#" class="footer__link footer__item-adr">г. Киев, пр-т Леси
+                                Украинки,
                                 26</a></li>
-                        <li class="footer__item"><a href="mailto:info@example.com"
-                                class="footer__item--link">info@example.com</a>
+                        <li class="footer__item">
+                            <a href="mailto:info@example.com"
+                                class="footer__link-adr footer__item-adr">info@example.com</a>
                         </li>
-                        <li class="footer__item"><a href="tel:+380991111111" class="footer__item--link">+38 099 111 11
-                                11</a></li>
+                        <li class="footer__item">
+                            <a href="tel:+380991111111" class="footer__link-adr footer__item-adr">+38 099 111 11
+                                11</a>
+                        </li>
                     </ul>
                 </adress>
             </div>
-            <div class="join">
+            <div class="footer__join">
                 <h3 class="join__item">присоединяйтесь</h3>
                 <ul class="join__list">
                     <li class="join__socials">
@@ -304,12 +462,10 @@
                 <span class="signup__text">Подпишитесь на рассылку</span>
 
                 <form class="signup__form">
-                    <label class="signup__label">
-                        <div class="signup__box">
-                            <input class="signup__input" type="email" name="email" placeholder="E-mail" required />
-                    </label>
+                    <label class="invisible" for="signup__email">E-mail</label>
+                    <input id="signup__email" class="signup__email" type="email" name="email" placeholder="E-mail" />
 
-                    <button type="submit" class="signup__button">
+                    <button type="submit" class="signup__button button button--footer">
                         <span class="signup__signature">Подписаться</span>
                         <svg width="24" height="24" class="signup__icon">
                             <use href="./images/icons.svg#icon-send"></use>

@@ -26,6 +26,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+           @media screen and (min-width: 1200px) {
+            justify-content: flex-start;
+    }
+  
     }
 
     &__socials:not(:last-child) {
