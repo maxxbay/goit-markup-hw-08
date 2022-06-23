@@ -71,8 +71,7 @@
   &__list-links {
     margin-top: 20px;
     @media screen and (min-width: 1200px) {
-      // display: flex;
-      justify-content: flex-start;
+    justify-content: flex-start;
     }
   }
 
@@ -91,12 +90,10 @@
 }
   .signup {
     display: block;
-    @include breakpointFrom(tablet) {
-      // @media screen and (min-width: 768px) {
+      @media screen and (min-width: 768px) {
       width: 450px;
     }
-    @include breakpointFrom(desktop) {
-      // @media screen and (min-width: 1200px) {
+      @media screen and (min-width: 1200px) {
       width: 50%;
     }
   &__text {

@@ -6,7 +6,7 @@
   &__title {
     margin-bottom: 30px;
   }
-  @include breakpointFrom(tablet) {
+  @include breakpointFrom(mobile) {
     &__list {
       display: flex;
       flex-wrap: wrap;

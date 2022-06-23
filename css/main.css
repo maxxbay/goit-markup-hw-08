@@ -643,7 +643,7 @@ img {
 .team__title {
   margin-bottom: 30px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 480px) {
   .team__list {
     display: flex;
     flex-wrap: wrap;
@@ -880,12 +880,12 @@ img {
 .signup {
   display: block;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .signup {
     width: 450px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .signup {
     width: 50%;
   }
