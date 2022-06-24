@@ -2,7 +2,7 @@
   &__btnlist {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 25px; // 40px - 15px
+    margin-bottom: 40px; // 40px - 15px
 
     @include breakpointFrom(tablet) {
       margin-bottom: 30px;

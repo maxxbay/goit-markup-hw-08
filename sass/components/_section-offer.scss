@@ -12,8 +12,9 @@
   }
 
   @media screen and (min-width: 1200px) {
-    padding-top: 89px;
-    padding-bottom: 0;
+    padding-top: 94px;
+    padding-bottom: 94px;
+
   }
 
   &__item {
@@ -26,9 +27,10 @@
       width: calc((100% - 30px) / 2);
       &:not(:nth-child(2n)) {
         margin-right: 30px;
+        margin-bottom: 30px;
       }
       &:not(:nth-last-child(-n + 2)) {
-        margin-bottom: 30px;
+        // margin-bottom: 30px;
       }
     }
 
@@ -36,6 +38,7 @@
       width: calc((100% - 30px * 3) / 4);
       &:not(:nth-child(4n)) {
         margin-right: 30px;
+        margin-bottom: 0;
       }
     } }
 

@@ -74,24 +74,7 @@ img {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-  max-width: 1200px;
-  margin: 0 auto;
 
-  // @include breakpointFrom(mobile) {
-  //   width: 480px;
-  // }
-
-  // @include breakpointFrom(tablet) {
-  //   width: 768px;
-  // }
-
-  // @include breakpointFrom(desktop) {
-  //   width: 1200px;
-  // }
-}
 
 .section {
   
@@ -304,4 +287,22 @@ img {
   color: $hero;
   font-size: 14px;
   line-height: 1.71;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include breakpointFrom(mobile) {
+    max-width: 480px;
+  }
+
+  @include breakpointFrom(tablet) {
+    max-width: 768px;
+  }
+
+  @include breakpointFrom(desktop) {
+    max-width: 1200px;
+  }
 }
