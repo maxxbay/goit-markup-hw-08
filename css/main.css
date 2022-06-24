@@ -374,6 +374,8 @@ img {
 }
 .header__social-linkbox {
   display: flex;
+  align-items: center;
+  justify-items: flex-start;
 }
 @media screen and (min-width: 768px) {
   .header__social-linkbox {
@@ -434,7 +436,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .header__box.is-open {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100vw;
@@ -442,6 +444,7 @@ img {
     padding: 48px 40px;
     background-color: #fff;
     z-index: 3;
+    max-width: none;
   }
   .header__box.is-open .header__button {
     position: absolute;
@@ -460,8 +463,8 @@ img {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -471,6 +474,12 @@ img {
   background-position: center;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero/hero-mobile.jpg");
   /* Кнопка */
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 @media screen and (max-width: 479px) {
   .hero {
@@ -516,6 +525,17 @@ img {
   line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
 }
 .hero__button {
   font-family: inherit;

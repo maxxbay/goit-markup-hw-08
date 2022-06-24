@@ -1,8 +1,8 @@
 
 .hero {
   // min-height: 400px; /* calc(100vh - 80px) */
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -11,6 +11,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+   @media screen and (min-width: 1200px){
+  padding-top: 200px;
+  padding-bottom: 200px;}
 
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('/images/hero/hero-mobile.jpg');
@@ -67,7 +71,14 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
-    
+    @media screen and (min-width: 1200px) {
+    max-width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;}
 }
 
 /* Кнопка */
